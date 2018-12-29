@@ -1,28 +1,28 @@
 package part_1.chapter_3;
 
 public class TransferAction {
-    private double transacionAmount;
+    private double transactionAmount;
 
     public TransferAction(double amount) {
         if (amount > 0) {
-            this.transacionAmount = amount;
+            this.transactionAmount = amount;
         } else {
             throw new IllegalArgumentException();
         }
     }
 
     public boolean transferIntoAccount(Account from, Account to) {
-        double demand = from.getAmount() - transacionAmount;
+        double demand = from.getAmount() - transactionAmount;
         if (demand >= 0) {
             from.setAmount(demand);
-            to.addAmount(transacionAmount);
+            to.addAmount(transactionAmount);
             return true;
         } else {
             return false;
         }
     }
 
-    public double getTransacionAmount() {
-        return transacionAmount;
+    public double getTransactionAmount() {
+        return transactionAmount;
     }
 }

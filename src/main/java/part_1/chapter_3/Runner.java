@@ -7,7 +7,7 @@ public class Runner {
         TransferAction action = new TransferAction(52.0);
         boolean complete = action.transferIntoAccount(from, to);
         if (complete) {
-            System.out.println("Сумма: " + action.getTransacionAmount() + " переведена успешно!");
+            System.out.println("Сумма: " + action.getTransactionAmount() + " переведена успешно!");
             System.out.print("На счету клиента ID = " + to.getId());
             System.out.println(" находится сумма: " + to.getAmount());
             System.out.println("На счету клиента ID = " + from.getId() +
