@@ -1,4 +1,4 @@
-package part_1.chapter_3;
+package part_1.chapter_3.transfer;
 
 public class Account {
     private long id;
