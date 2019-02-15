@@ -1,4 +1,4 @@
-package part_1.chapter_4;
+package part_1.chapter_4.point;
 
 public class Point3D extends Point2D {
     private int z;
@@ -10,5 +10,15 @@ public class Point3D extends Point2D {
 
     public Point3D() {
         this(-1, -1, -1); // вызов конструктора Point3D с параметрами
+    }
+
+    @Override
+    public double length() {
+        return Math.hypot(super.length(), z);
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + " z= " + z;
     }
 }
