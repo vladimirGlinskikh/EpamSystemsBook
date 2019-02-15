@@ -1,7 +1,7 @@
 package part_1.chapter_4.point;
 
 public class Point1D {
-    private int x;
+    public int x;
 
     public Point1D(int x) {
         this.x = x;
