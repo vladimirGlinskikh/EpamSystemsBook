@@ -10,5 +10,5 @@ public abstract class AbstractCardAction {
         return true;
     }
 
-    public abstract void doPayment(double amoutPayment);
+    public abstract void doPayment(double amountPayment);
 }
