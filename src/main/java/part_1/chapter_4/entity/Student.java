@@ -1,9 +1,12 @@
 package part_1.chapter_4.entity;
 
-public class Student {
-    private int id;
+public class Student implements Cloneable {
+    private int id = 71;
     private int age;
     private String name;
+
+    public Student() {
+    }
 
     public Student(int id, int age, String name) {
         this.id = id;
@@ -15,12 +18,21 @@ public class Student {
         return id;
     }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public int getAge() {
         return age;
     }
 
     public String getName() {
         return name;
+    }
+
+    @Override
+    public Object clone() throws CloneNotSupportedException {
+        return super.clone();
     }
 
     public boolean equals(Object obj) {
