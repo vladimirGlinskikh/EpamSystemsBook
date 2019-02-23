@@ -18,12 +18,12 @@ public class HamletInternational {
             String language = "";
             switch (j) {
                 case '1':
+                    language = "en";
                     country = "US";
-                    language = "EN";
                     break;
                 case '2':
+                    language = "be";
                     country = "BY";
-                    language = "BE";
                     break;
             }
             Locale current = new Locale(language, country);
