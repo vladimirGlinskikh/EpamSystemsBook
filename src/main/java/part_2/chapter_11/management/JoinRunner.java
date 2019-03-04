@@ -11,7 +11,7 @@ public class JoinRunner {
         t1.start();
         t2.start();
         try {
-            t1.join();
+            t1.join(500);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
