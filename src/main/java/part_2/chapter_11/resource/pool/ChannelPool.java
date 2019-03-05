@@ -1,5 +1,7 @@
 package part_2.chapter_11.resource.pool;
 
+import part_2.chapter_11.resource.exception.ResourceException;
+
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.concurrent.Semaphore;
