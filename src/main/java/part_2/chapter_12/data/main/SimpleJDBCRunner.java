@@ -8,15 +8,15 @@ import java.util.Properties;
 
 public class SimpleJDBCRunner {
     public static void main(String[] args) throws SQLException {
-        String url = "jdbc:mysql://localhost:3306/testphones";
+        String url = "jdbc:postgresql://localhost:5432/testphones";
         Properties prop = new Properties();
-        prop.put("user", "root");
-        prop.put("password", "root");
+        prop.put("user", "postgres");
+        prop.put("password", "zh");
         prop.put("autoReconnect", "true");
         prop.put("characterEncoding", "UTF-8");
         prop.put("useUnicode", "true");
         Connection cn = null;
-        DriverManager.registerDriver(new com.mysql.jdbc.Driver());
+        DriverManager.registerDriver(new org.postgresql.Driver());
         try {
             cn = DriverManager.getConnection(url, prop);
             Statement st = null;
