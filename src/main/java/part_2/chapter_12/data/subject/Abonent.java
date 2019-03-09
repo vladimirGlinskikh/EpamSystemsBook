@@ -32,7 +32,7 @@ public class Abonent extends Entity {
     @Override
     public String toString() {
         return "Abonent{id=" + getId() +
-                "phone=" + phone +
+                " phone=" + phone +
                 ", lastname='" + lastname + '\'' +
                 '}';
     }
