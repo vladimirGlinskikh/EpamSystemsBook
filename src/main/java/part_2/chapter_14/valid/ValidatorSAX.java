@@ -13,9 +13,9 @@ import java.io.IOException;
 
 public class ValidatorSAX {
     public static void main(String[] args) {
-        String filename = "data/students.xml";
-        String schemaname = "data/students.xsd";
-        String logname = "logs/log.txt";
+        String filename = "src/main/resources/data/students.xml";
+        String schemaname = "src/main/resources/data/students.xsd";
+        String logname = "src/main/resources/logs/log.txt";
         Schema schema = null;
         String language = XMLConstants.W3C_XML_SCHEMA_NS_URI;
         SchemaFactory factory = SchemaFactory.newInstance(language);
