@@ -1,10 +1,9 @@
 package part_2.chapter_14.xmlstudents;
 
 import javax.xml.bind.annotation.*;
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import javax.xml.bind.annotation.adapters.*;
 
-@XmlRootElement
+@XmlRootElement(name = "Student")
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Student", propOrder = {
         "name",
@@ -18,7 +17,7 @@ public class Student {
     private String login;
     @XmlElement(required = true)
     private String name;
-    @XmlAttribute(required = false)
+    @XmlElement(required = false)
     private String faculty;
     @XmlElement(required = true)
     private int telephone;
@@ -78,16 +77,11 @@ public class Student {
 
     @Override
     public String toString() {
-        return "Student{" +
-                "login='" + login + '\'' +
-                ", name='" + name + '\'' +
-                ", faculty='" + faculty + '\'' +
-                ", telephone=" + telephone +
-                ", address=" + address +
-                '}';
+        return "\nLogin: " + login + "\nName: " + name + "\nTelephone: " + telephone
+                + "\nFaculty: " + faculty + address.toString();
     }
 
-    @XmlRootElement
+    @XmlRootElement(name = "Address")
     @XmlType(name = "address", propOrder = {
             "city",
             "country",
@@ -134,11 +128,8 @@ public class Student {
 
         @Override
         public String toString() {
-            return "Address{" +
-                    "country='" + country + '\'' +
-                    ", city='" + city + '\'' +
-                    ", street='" + street + '\'' +
-                    '}';
+            return "\nAddress:" + "\n\tCountry: " + country
+                    + "\n\tCity: " + city + "\n\tStreet: " + street + "\n";
         }
     }
 }

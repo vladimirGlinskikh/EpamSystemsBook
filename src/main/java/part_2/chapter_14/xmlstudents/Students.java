@@ -1,8 +1,12 @@
 package part_2.chapter_14.xmlstudents;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.util.ArrayList;
 
+@XmlRootElement
 public class Students {
+    @XmlElement(name = "student")
     private ArrayList<Student> list = new ArrayList<>();
 
     public Students() {
@@ -19,8 +23,6 @@ public class Students {
 
     @Override
     public String toString() {
-        return "Students{" +
-                "list=" + list +
-                '}';
+        return "Students [list=" + list + "]";
     }
 }
