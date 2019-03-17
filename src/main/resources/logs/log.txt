@@ -1,2 +1,0 @@
-ERROR - 2 : 11 - cvc-elt.1.a: Cannot find the declaration of element 'students'.
-ERROR - 2 : 11 - cvc-elt.1.a: Cannot find the declaration of element 'students'.
