@@ -1,22 +1,16 @@
 package application_1.calculation;
 
-import org.junit.After;
-import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
 
 public class ScholarshipCalculatorTest2 {
-    private ScholarshipCalculatorImpl scholarshipCalculator;
+    private static ScholarshipCalculatorImpl scholarshipCalculator;
 
-    @Before
-    public void initScholarshipCalculator() {
+    @BeforeClass
+    public static void initScholarshipCalculator() {
         scholarshipCalculator = new ScholarshipCalculatorImpl();
-    }
-
-    @After
-    public void clearScholarshipCalculator() {
-        scholarshipCalculator = null;
     }
 
     @Test
