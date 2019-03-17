@@ -13,15 +13,15 @@ public class ScholarshipCalculatorTest2 {
         scholarshipCalculator = new ScholarshipCalculatorImpl();
     }
 
-    @Test
-    public void stepUpCoefficientForFiveTest() {
+    @Test(expected = NotSuchMarkException.class)
+    public void stepUpCoefficientForFiveTest() throws NotSuchMarkException{
         double expected = 1.5;
         double actual = scholarshipCalculator.stepUpCoefficientCalculate(5);
         assertEquals("Coefficient for mark 5 is wrong: ", expected, actual, 0.01);
     }
 
-    @Test
-    public void stepUpCoefficientThreeTest() {
+    @Test(expected = NotSuchMarkException.class)
+    public void stepUpCoefficientThreeTest() throws  NotSuchMarkException{
         double expected = 1;
         double actual = scholarshipCalculator.stepUpCoefficientCalculate(3);
         assertEquals("Coefficient for mark 3 is wrong: ", expected, actual, 0.01);
