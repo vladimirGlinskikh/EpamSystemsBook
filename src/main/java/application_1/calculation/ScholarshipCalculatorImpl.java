@@ -8,9 +8,12 @@ public class ScholarshipCalculatorImpl implements IscholarshipCalculator {
         return BASIC_SCHOLARSHIP * stepUpCoefficient;
     }
 
-    public double stepUpCoefficientCalculate(int averageMark) {
+    public double stepUpCoefficientCalculate(int averageMark) throws NotSuchMarkException {
         double stepUpCoefficient;
         switch (averageMark) {
+            case 2:
+                stepUpCoefficient = 0;
+                break;
             case 3:
                 stepUpCoefficient = 1;
                 break;
@@ -21,7 +24,7 @@ public class ScholarshipCalculatorImpl implements IscholarshipCalculator {
                 stepUpCoefficient = 1.5;
                 break;
             default:
-                stepUpCoefficient = 0;
+                throw new NotSuchMarkException("There is no mark: " + averageMark);
         }
         return stepUpCoefficient;
     }
