@@ -1,5 +1,9 @@
 package application_1.calculation;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+
 public class ScholarshipCalculatorImpl implements IscholarshipCalculator {
     public static final double BASIC_SCHOLARSHIP = 100;
 
@@ -27,5 +31,12 @@ public class ScholarshipCalculatorImpl implements IscholarshipCalculator {
                 throw new NotSuchMarkException("There is no mark: " + averageMark);
         }
         return stepUpCoefficient;
+    }
+
+    public void writeResult(File f) throws IOException {
+        FileWriter fw = new FileWriter(f);
+        fw.append(this.toString());
+        fw.flush();
+        fw.close();
     }
 }
