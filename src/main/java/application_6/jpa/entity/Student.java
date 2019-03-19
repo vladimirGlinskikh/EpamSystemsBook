@@ -1,8 +1,10 @@
 package application_6.jpa.entity;
 
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.io.Serializable;
 
+@Entity
+@Table(name = "students")
 public class Student implements Serializable {
     @Id
     private Long id;
