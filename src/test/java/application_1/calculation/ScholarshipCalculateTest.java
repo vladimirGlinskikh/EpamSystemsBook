@@ -14,6 +14,6 @@ public class ScholarshipCalculateTest {
         double actual = scholarshipCalculator.scholarshipCalculate(stepUpCoefficient);
 
         Assert.assertEquals(expected, actual, 0.01);
-        
+
     }
 }
